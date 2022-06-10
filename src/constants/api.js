@@ -1,43 +1,37 @@
 export const BASE_URL ="https://localhost:5001";
 
+
 //Products
+
 export const GET_PRODUCTS = "/Product/get";
 export const ADD_PRODUCTS = "/Product/add";
-export const GET_PRODUCT_BY_ID = "/Product/:id";
-export const DELETE_PRODUCT = "/Product/:id";
+export const GET_PRODUCT_BY_ID = "/Product/getById";
+export const UPDATE_PRODUCT = "/Product/update";
+export const DELETE_PRODUCT = "/Product/delete";
 
-
-//Address
-export const GET_ADDRESS = "/Address/getuseraddress";
-export const ADD_ADDRESS = "/Address/add";
-export const UPDATE_ADDRESS = "/Address/update";
-
-//Contactus
-export const ADD_CONTACTUS = "/ContactUs/add";
-
-
-//Review
-export const GET_REVIEW_BY_PRODUCTID = "/ProductRating/get";
-export const ADD_REVIEWS = "/ProductRating/add";
-
-//package
 export const GET_PACKAGES = "/Package/get";
-export const GET_PACKAGE_BY_ID = "/Package/get/:id";
+export const ADD_PACKAGE = "/Package/add";
+export const DElETE_PACKAGE = "/Package/delete";
+export const GET_PACKAGE_BY_ID = "/Package/getById";
 
+export const UPDATE_PACKAGE = "/Package/update";
+
+
+//Productss
+
+export const GET_CAROUSEL = "/Carousel/get";
+export const ADD_CAROUSEL = "/Carousel/add";
+export const DELETE_CAROUSEL = "/Carousel/delete";
+
+//Contact Us
+export const GET_CONTACT_US = "/ContactUs/get";
+
+//Orders
+export const GET_ORDERS = "/Order/get";
 
 //Authentication
 export const LOGIN = "/Authentication/login";
 export const REGISTER = "/Authentication/register";
-
-//Carousel
-export const GET_CAROUSEL = "/Carousel/get";
-
-//Order
-export const ADD_ORDER = "/Order/add"
-export const GET_ORDER = "/Order/userorders";
-
-//Payment Verification
-export const PAYMENT_VERIFICATION = "/PaymentVerification";
 
 
 //Products
@@ -45,37 +39,27 @@ export const GET_PRODUCTS_URL = `${BASE_URL}${GET_PRODUCTS}`;
 export const ADD_PRODUCTS_URL = `${BASE_URL}${ADD_PRODUCTS}`;
 export const GET_PRODUCT_BY_ID_URL = `${BASE_URL}${GET_PRODUCTS}`;
 export const DELETE_PRODUCT_URL = `${BASE_URL}${DELETE_PRODUCT}`;
+export const UPDATE_PRODUCT_URL = `${BASE_URL}${UPDATE_PRODUCT}`;
+export const ADD_PACKAGE_URL = `${BASE_URL}${ ADD_PACKAGE}`;
+export const GET_PACKAGE_URL = `${BASE_URL}${GET_PACKAGES}`;
+export const GET_PACKAGE_BY_ID_URL = `${BASE_URL}${GET_PRODUCTS}`;
 
-//packages
-export const GET_PACKAGES_URL = `${BASE_URL}${GET_PACKAGES}`;
-export const GET_PACKAGE_BY_ID_URL = `${BASE_URL}${GET_PACKAGE_BY_ID}`;
+export const DElETE_PACKAGE_URL = `${BASE_URL}${DElETE_PACKAGE}`;
+export const UPDATE_PACKAGE_URL = `${BASE_URL}${UPDATE_PACKAGE}`;
+
 
 //Authentication
 export const USER_LOGIN = `${BASE_URL}${LOGIN}`;
 export const USER_REGISTER = `${BASE_URL}${REGISTER}`;
 
 //Carousel
-export const CAROUSEL = `${BASE_URL}${GET_CAROUSEL}`
+export const GET_CAROUSEL_URL = `${BASE_URL}${GET_CAROUSEL}`;
+export const ADD_CAROUSEL_URL = `${BASE_URL}${ADD_CAROUSEL}`;
+export const DELETE_CAROUSEL_URL = `${BASE_URL}${DELETE_CAROUSEL}`;
+
+//Contact Us
+export const GET_CONTACT_US_URL = `${BASE_URL}${GET_CONTACT_US}`;
 
 //Order
-
-export const ADD_ORDER_URL = `${BASE_URL}${ADD_ORDER}`;
-export const GET_ORDER_URL = `${BASE_URL}${GET_ORDER}`;
-
-
-
-//REVIEW
-export const GET_REVIEW_BY_PRODUCTID_URL = `${BASE_URL}${GET_REVIEW_BY_PRODUCTID}`;
-export const ADD_REVIEWS_URL = `${BASE_URL}${ADD_REVIEWS}`;
-
-//Address
-export const GET_ADDRESS_URL = `${BASE_URL}${GET_ADDRESS}`;
-export const ADD_ADDRESS_URL = `${BASE_URL}${ADD_ADDRESS}`;
-export const UPDATE_ADDRESS_URL = `${BASE_URL}${UPDATE_ADDRESS}`;
-
-//Contactus
-export const ADD_CONTACTUS_URL = `${BASE_URL}${ADD_CONTACTUS}`;
-
-//Payment Verification
-export const PAYMENT_VERIFICATION_URL = `${BASE_URL}${PAYMENT_VERIFICATION}`;
+export const GET_ORDERS_URL = `${BASE_URL}${GET_ORDERS}`;
 

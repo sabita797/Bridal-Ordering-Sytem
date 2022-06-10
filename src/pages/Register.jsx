@@ -93,7 +93,6 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 const Register = () => {
-  
   let history = useHistory();
   const [inputValues, setInputValue] = useState({
     name: "",
@@ -177,40 +176,37 @@ const Register = () => {
   }
 
   const registerService = async () => {
-    if (inputValues.name === "" || inputValues.email === "" || inputValues.password === "") {
-      alert("Please fill all the fields")
-    }  else {
-      try {
-        // if(validation.name && validation.email && validation.password === ""){
-        const response = await signUpService(inputValues);
-        const responseData = await response.json();
-        debugger;
-        if(response.ok){
-          if(responseData.isError === false){
-           setOpen(true);
-            setMessage(response.message);
-            setInputValue({
-              name: '',
-              email: '',
-              password: '',
-            })
-            setTimeout(route,200);
-  
-          }else{
-            setValidation({
-              email: responseData.message
-            })
-            // alert(responseData.message)
-          }
+    debugger;
+    try {
+      // if(validation.name && validation.email && validation.password === ""){
+      const response = await signUpService(inputValues);
+      debugger;
+      const responseData = await response.json();
+      if(response.ok){
+        if(responseData.isError === false){
+          debugger;
+         setOpen(true);
+          setMessage(response.message);
+          setInputValue({
+            name: '',
+            email: '',
+            password: '',
+          })
+          setTimeout(route,2000);
+
+        }else{
+          setValidation({
+            email: responseData.message
+          })
+          // alert(responseData.message)
         }
-        // } else {
-        // }
-        debugger;
-      } catch {
-  
       }
+      // } else {
+      // }
+      debugger;
+    } catch {
+
     }
-    
   }
   return (
     <Container>

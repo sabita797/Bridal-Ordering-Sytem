@@ -125,7 +125,7 @@ const Login = () => {
   );
 
   const route = () => {
-    history.push("/")
+    history.push("/home")
   }
 
   const userlogin = async () => {
@@ -137,10 +137,10 @@ const Login = () => {
       if (response.ok) {
         if (responseData.isError === false) {
           localStorage.setItem('LoginInfo', JSON.stringify(inputValues));
-          localStorage.setItem('LogedIn', JSON.stringify(responseData.result));
+          localStorage.setItem('user', JSON.stringify(responseData.result));
           setOpen(true);
           setMessage(response.message);
-          setTimeout(route,200)
+          setTimeout(route,2000)
         } else {
           setValidation(responseData.message)
         }
